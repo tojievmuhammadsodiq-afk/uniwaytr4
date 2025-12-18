@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UniWayTR — Обучение в Турции без экзаменов</title>
+
+<style>
+/* --- ОБЩИЕ СТИЛИ --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ШАПКА --- */
+header {
+    background: linear-gradient(rgba(11, 94, 215, 0.8), rgba(176, 42, 55, 0.8)), 
+                url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+header strong {
+    font-weight: 800;
+    color: #ffda6a;
+}
+
+/* КНОПКИ */
+button {
+    background: #ffda6a;
+    color: #333;
+    border: none;
+    padding: 18px 35px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ffeeb0;
+}
+
+/* --- СЕКЦИИ --- */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #0b5ed7;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #b02a37;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* КАРТОЧКИ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* СПИСКИ */
+.list-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+
+ul li::before {
+    content: "✅";
+    margin-right: 10px;
+}
+
+/* ФОРМА */
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #0b5ed7;
+    background: white;
+}
+
+/* ПОДВАЛ */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="image.png" alt="UniWayTR Logo" style="width: 250px; margin-bottom: 20px;">
+    
+    <h1>Поступление в университеты Турции <br><strong>БЕЗ ЭКЗАМЕНОВ</strong></h1>
+    <p style="font-size: 20px; opacity: 0.9;">Официальное зачисление, ВНЖ и поддержка 24/7</p>
+    <br>
+    <button onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth'})">
+        Получить бесплатную консультацию
+    </button>
+</header>
+
+<section>
+    <h2>Почему Турция?</h2>
+    <div class="cards">
+        <div class="card">
+            <span class="card-icon">🌍</span>
+            <h3>Диплом признается везде</h3>
+            <p>Дипломы котируются в Европе и США (Болонская система)</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">🚫</span>
+            <h3>Без экзаменов</h3>
+            <p>Поступление только по аттестату, без ЕГЭ и ЗНО</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">💰</span>
+            <h3>Доступная цена</h3>
+            <p>Стоимость обучения от $300 в год</p>
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #eef2f7; max-width: 100%;">
+    <div style="max-width: 1100px; margin: auto;">
+        <h2>Популярные направления</h2>
+        <div class="cards">
+            <div class="card">
+                <span class="card-icon">🩺</span>
+                <h3>Медицина</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">💻</span>
+                <h3>IT и Программирование</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚖️</span>
+                <h3>Юриспруденция</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">🏗️</span>
+                <h3>Инженерия</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Как мы работаем</h2>
+    <div class="list-box">
+        <ul>
+            <li>📞 <strong>Шаг 1:</strong> Бесплатная консультация и подбор ВУЗа</li>
+            <li>📄 <strong>Шаг 2:</strong> Перевод и подача документов</li>
+            <li>🎓 <strong>Шаг 3:</strong> Получение официального письма о зачислении</li>
+            <li>✈️ <strong>Шаг 4:</strong> Встреча в аэропорту и помощь с жильем</li>
+            <li>🏠 <strong>Шаг 5:</strong> Оформление ВНЖ (Икамет)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact-section">
+    <h2>Оставьте заявку</h2>
+    <p style="text-align: center; margin-bottom: 30px;">Мы подберем университет под ваш бюджет за 1 день</p>
+
+    <div class="form-box">
+        <form id="tg-form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="text" name="phone" placeholder="Телефон / WhatsApp" required>
+            <input type="text" name="city" placeholder="Желаемый город (например: Стамбул)">
+            <textarea name="message" rows="3" placeholder="Ваш вопрос или специальность"></textarea>
+            <button type="submit" style="width: 100%;">Отправить заявку</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 UniWayTR — Обучение в Турции. Все права защищены.</p>
+</footer>
+
+<a href="https://wa.me/905056710193?text=Здравствуйте,%20хочу%20получить%20консультацию" class="whatsapp-btn" target="_blank">
+    <span style="font-size: 24px;">💬</span> Написать в WhatsApp
+</a>
+
+<script>
+    document.getElementById("tg-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const BOT_TOKEN = "8316624461:AAFfp-8UzPr_I5fUVQUiJnD7PhEP3Iiu7II"; 
+        const CHAT_ID = "5464378247";
+
+        const btn = this.querySelector('button');
+        const originalText = btn.innerText;
+        btn.innerText = "Отправка...";
+        btn.disabled = true;
+
+        const text = `
+📩 *Новая заявка UniWayTR*
+👤 Имя: ${this.name.value}
+📞 Телефон: ${this.phone.value}
+🌍 Город: ${this.city.value}
+💬 Вопрос: ${this.message.value}
+        `;
+
+        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: text,
+                parse_mode: "Markdown"
+            })
+        })
+        .then(response => {
+            if(response.ok) {
+                alert("✅ Заявка принята! Мы скоро свяжемся с вами.");
+                this.reset();
+            } else {
+                alert("Ошибка! Что-то пошло не так.");
+            }
+        })
+        .catch(error => {
+            alert("Ошибка сети. Попробуйте позже.");
+        })
+        .finally(() => {
+            btn.innerText = originalText;
+            btn.disabled = false;
+        });
+    });
+</script>
+
+</body>
+</html>
